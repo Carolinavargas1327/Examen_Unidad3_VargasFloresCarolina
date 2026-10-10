@@ -2,13 +2,7 @@
 # TAREA 4: SCRIPT DE STREAMLIT (app_ecotransito.py)
 # ==========================================================================
 # ESCRIBE TU CÓDIGO AQUÍ:
-import streamlit as st
-import pandas as pd
 
-import seaborn as sns
-import matplotlib.pyplot as plt
-import numpy as np
-from sklearn.impute import KNNImputer
 
 # ==========================================================
 # 1. CONFIGURACIÓN DE PÁGINA
