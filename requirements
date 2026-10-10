@@ -1,8 +1,8 @@
 %%writefile requirements.txt
-scikit-learn
 streamlit
 pandas
-numpy
 plotly
 seaborn
 matplotlib
+numpy
+scikit-learn
