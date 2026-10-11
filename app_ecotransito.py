@@ -9,6 +9,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.impute import KNNImputer
+from pathlib import Path
 # ==========================================================
 # 1. CONFIGURACIÓN DE PÁGINA
 # ==========================================================
