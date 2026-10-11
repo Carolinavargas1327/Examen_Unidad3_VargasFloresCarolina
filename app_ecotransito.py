@@ -22,7 +22,12 @@ st.subheader("Diagnóstico de calidad del aire y flujo vehicular")
 # ==========================================================
 @st.cache_data
 def cargar_y_limpiar_datos():
-    df = pd.read_csv("cdmx_air_traffic_dirty.csv")
+    RUTA_CSV = Path(__file__).parent / "cdmx_air_traffic_dirty.csv"
+
+if not RUTA_CSV.exists():
+    raise FileNotFoundError(
+        f"No se encontró el archivo: {RUTA_CSV}"
+    )
     # Sustituir centinelas y eliminar duplicados
     columnas_numericas = df.select_dtypes(include="number").columns
     df[columnas_numericas] = df[columnas_numericas].replace(-999.0, np.nan)
