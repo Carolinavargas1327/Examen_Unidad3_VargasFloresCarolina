@@ -21,7 +21,7 @@ st.subheader("Diagnóstico de calidad del aire y flujo vehicular")
 # 2. CARGA Y LIMPIEZA DE LOS DATOS
 # ==========================================================
 @st.cache_data
-    RUTA_CSV = Path(__file__).parent / "cdmx_air_traffic_dirty.csv"
+    
     
     # Sustituir centinelas y eliminar duplicados
     columnas_numericas = df.select_dtypes(include="number").columns
