@@ -35,10 +35,9 @@ if not RUTA_CSV.exists():
     )
 
 df = pd.read_csv(RUTA_CSV)
-
+   
     # Sustituir centinelas y eliminar duplicados
     columnas_numericas = df.select_dtypes(include="number").columns
-
     df[columnas_numericas] = df[columnas_numericas].replace(-999.0, np.nan)
     df = df.drop_duplicates().reset_index(drop=True)
     
