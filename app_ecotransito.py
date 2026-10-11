@@ -24,11 +24,6 @@ st.subheader("Diagnóstico de calidad del aire y flujo vehicular")
 def cargar_y_limpiar_datos():
     RUTA_CSV = Path(__file__).parent / "cdmx_air_traffic_dirty.csv"
 
-if not RUTA_CSV.exists():
-    raise FileNotFoundError(
-        f"No se encontró el archivo: {RUTA_CSV}"
-    )
-
 df = pd.read_csv(RUTA_CSV)
     
     # Sustituir centinelas y eliminar duplicados
