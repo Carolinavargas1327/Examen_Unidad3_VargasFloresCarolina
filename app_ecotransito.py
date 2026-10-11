@@ -23,7 +23,7 @@ st.subheader("Diagnóstico de calidad del aire y flujo vehicular")
 # ==========================================================
 @st.cache_data
 def cargar_y_limpiar_datos():
-    df = pd.read_csv("cdmx_air_traffic_dirty.csv")
+    df = pd.read_csv("cdmx_air_traffic_clean.csv")
     
     # Sustituir centinelas y eliminar duplicados
     columnas_numericas = df.select_dtypes(include="number").columns
@@ -69,7 +69,7 @@ def cargar_y_limpiar_datos():
 try:
     df = cargar_y_limpiar_datos()
 except FileNotFoundError:
-    st.error("No se encontró cdmx_air_traffic_dirty.csv. Guarda el archivo CSV en la misma carpeta que app_ecotransito.py.")
+    st.error("No se encontró cdmx_air_traffic_clean.csv. Guarda el archivo CSV en la misma carpeta que app_ecotransito.py.")
     st.stop()
 
 # ==========================================================
